@@ -29,7 +29,7 @@ async function getSerpZone(): Promise<string> {
     console.error('[BrightData] Error fetching active zones:', error);
   }
   
-  return 'narrative_shield_serp';
+  return 'narrative_aegis_serp';
 }
 
 interface SerpQuery {

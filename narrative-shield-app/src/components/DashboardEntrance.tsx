@@ -114,7 +114,7 @@ export default function DashboardEntrance({ children }: { children: React.ReactN
           {/* Text */}
           <div className="text-center" style={{ animation: 'fadeIn 0.5s ease-out 0.5s both' }}>
             <p className="text-ghost font-bold text-lg tracking-tight">
-              Narrative<span className="text-lime">Shield</span>
+              Narrative<span className="text-lime">Aegis</span>
             </p>
             <p className="text-ghost/40 text-sm mt-1">Initializing Dashboard...</p>
           </div>

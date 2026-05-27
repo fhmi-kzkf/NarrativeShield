@@ -19,7 +19,7 @@ export default function Navbar() {
             </svg>
           </div>
           <span className="text-ghost font-bold text-base tracking-tight">
-            Narrative<span className="text-lime">Shield</span>
+            Narrative<span className="text-lime">Aegis</span>
           </span>
         </Link>
 

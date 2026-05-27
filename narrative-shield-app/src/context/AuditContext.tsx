@@ -23,13 +23,13 @@ export function AuditProvider({ children }: { children: React.ReactNode }) {
   // Load from localStorage on client-side mount
   useEffect(() => {
     try {
-      const storedHistory = localStorage.getItem('narrative_shield_history');
+      const storedHistory = localStorage.getItem('narrative_aegis_history');
       if (storedHistory) {
         const parsed = JSON.parse(storedHistory);
         setPastAudits(parsed);
         
         // Restore the last active audit if it exists
-        const lastActiveId = localStorage.getItem('narrative_shield_active_id');
+        const lastActiveId = localStorage.getItem('narrative_aegis_active_id');
         if (lastActiveId) {
           const active = parsed.find((a: any) => a.id === lastActiveId);
           if (active) setAuditData(active);
@@ -67,12 +67,12 @@ export function AuditProvider({ children }: { children: React.ReactNode }) {
       setPastAudits(prev => {
         const filtered = prev.filter((a: any) => a.brand.toLowerCase() !== brand.toLowerCase());
         const updated = [newAuditRecord, ...filtered];
-        localStorage.setItem('narrative_shield_history', JSON.stringify(updated));
+        localStorage.setItem('narrative_aegis_history', JSON.stringify(updated));
         return updated;
       });
 
       setAuditData(newAuditRecord);
-      localStorage.setItem('narrative_shield_active_id', auditId);
+      localStorage.setItem('narrative_aegis_active_id', auditId);
     } catch (err: any) {
       setError(err.message || 'An error occurred');
     } finally {
@@ -84,22 +84,22 @@ export function AuditProvider({ children }: { children: React.ReactNode }) {
     const active = pastAudits.find((a: any) => a.id === id);
     if (active) {
       setAuditData(active);
-      localStorage.setItem('narrative_shield_active_id', id);
+      localStorage.setItem('narrative_aegis_active_id', id);
     }
   };
 
   const deleteAudit = (id: string) => {
     setPastAudits(prev => {
       const updated = prev.filter((a: any) => a.id !== id);
-      localStorage.setItem('narrative_shield_history', JSON.stringify(updated));
+      localStorage.setItem('narrative_aegis_history', JSON.stringify(updated));
       
       if (auditData?.id === id) {
         if (updated.length > 0) {
           setAuditData(updated[0]);
-          localStorage.setItem('narrative_shield_active_id', updated[0].id);
+          localStorage.setItem('narrative_aegis_active_id', updated[0].id);
         } else {
           setAuditData(null);
-          localStorage.removeItem('narrative_shield_active_id');
+          localStorage.removeItem('narrative_aegis_active_id');
         }
       }
       return updated;

@@ -65,7 +65,7 @@ export default function LandingPage() {
               </svg>
             </div>
             <span className="text-sm text-ghost/40">
-              Narrative<span className="text-lime/60">Shield</span> v4.0
+              Narrative<span className="text-lime/60">Aegis</span> v4.0
             </span>
           </div>
           <div className="flex items-center gap-6 text-caption text-ghost/30">
@@ -395,7 +395,7 @@ function ProblemSection() {
               </div>
               <div className="p-8 bg-lime/[0.03]">
                 <span className="text-caption text-lime/60 uppercase tracking-wider">AI Search Intelligence</span>
-                <h3 className="text-subheading text-lime mt-2 mb-4">Narrative Shield™</h3>
+                <h3 className="text-subheading text-lime mt-2 mb-4">Narrative Aegis™</h3>
                 <ul className="space-y-2 text-sm text-ghost/70">
                   <li className="flex items-center gap-2"><span className="text-lime">✓</span> Audits what AI tells users</li>
                   <li className="flex items-center gap-2"><span className="text-lime">✓</span> Detects poison sources</li>
@@ -697,7 +697,7 @@ function StatsSection() {
       {/* Marquee background */}
       <div className="absolute inset-0 flex items-center opacity-[0.03] pointer-events-none overflow-hidden">
         <div className="animate-marquee whitespace-nowrap" style={{ fontFamily: 'var(--font-display)', fontSize: '150px' }}>
-          NARRATIVE SHIELD • AI SEARCH VISIBILITY • AISO • BRAND INTELLIGENCE • NARRATIVE SHIELD • AI SEARCH VISIBILITY • AISO • BRAND INTELLIGENCE •&nbsp;
+          NARRATIVE AEGIS • AI SEARCH VISIBILITY • AISO • BRAND INTELLIGENCE • NARRATIVE AEGIS • AI SEARCH VISIBILITY • AISO • BRAND INTELLIGENCE •&nbsp;
         </div>
       </div>
 

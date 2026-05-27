@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Narrative Shield™ — AI Search Visibility & Narrative Intelligence",
+  title: "Narrative Aegis™ — AI Search Visibility & Narrative Intelligence",
   description:
     "Discover what AI tells people about your brand. Audit AI Overviews, detect poison sources, and generate corrective action playbooks.",
   keywords: [
